@@ -106,5 +106,6 @@ func main() {
 	//Tutorial_10
 	//Variables with initializers
 	TutorialText("10", "Var with inits")
+	TutorialText("10", "Var with inits")
 
 }
