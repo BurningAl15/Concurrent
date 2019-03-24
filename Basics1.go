@@ -7,6 +7,7 @@ import (
 	//Tutorial_01
 	"time"
 	//Tutorial_02
+	"math/cmplx"
 	"math/rand"
 )
 
@@ -34,7 +35,7 @@ func swap(x, y string) (string, string) {
 	return y, x
 }
 
-//Tutorial 7
+//Tutorial 8
 func split(sum int) (x, y, z int) {
 	x = sum * 4 / 9
 	y = sum - x
@@ -42,7 +43,16 @@ func split(sum int) (x, y, z int) {
 	return
 }
 
+//Tutorial_12
+var (
+	ToBe   bool       = false
+	maxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+
 var cSharp, python, java bool
+
+var i, j int = 1, 2
 
 func main() {
 	//fmt.Println("Hello, 世界")
@@ -106,6 +116,40 @@ func main() {
 	//Tutorial_10
 	//Variables with initializers
 	TutorialText("10", "Var with inits")
-	TutorialText("10", "Var with inits")
+	fmt.Println(i, j, cSharp, python, java)
+
+	//Tutorial_11
+	//Short variable declarations
+	TutorialText("11", "Short Var declarations")
+	k := 3
+	fmt.Println(i, j, k, cSharp, python, java)
+
+	//Tutorial_12
+	//Basic types
+	TutorialText("12", "Basic Types")
+	/*
+		bool
+
+		string
+
+		int  int8  int16  int32  int64
+		uint uint8 uint16 uint32 uint64 uintptr
+
+		byte //Alias for uint8
+
+		rune //alias for int32
+			 //represents a Unicode code point
+
+		float32 float64
+
+		complex64 complex128
+	*/
+	fmt.Printf("Type: %T value: %v\n", ToBe, ToBe)
+	fmt.Printf("Type: %T value: %v\n", maxInt, maxInt)
+	fmt.Printf("Type: %T value: %v\n", z, z)
+
+	//Tutorial_13
+	//Zero Values
+	TutorialText("13", "Zero Values")
 
 }
