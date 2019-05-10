@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
 	"runtime"
 	"sync"
 	"time"
@@ -278,4 +279,18 @@ func main() {
 	// }
 	// time.Sleep(time.Second)
 	// fmt.Println(c.Value("somekey"))
+
+	var vect [5]int
+	// vect := int{5, 3, 2, 5, 2}
+
+	for i := 0; i < 5; i++ {
+		vect[i] = rand.Intn(100)
+	}
+
+	sum := 0
+
+	for i := 0; i < 5; i++ {
+		sum += vect[i]
+	}
+	fmt.Println(sum)
 }
