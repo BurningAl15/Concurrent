@@ -1,0 +1,2 @@
+Para ver si es correcto el programa: spin -a nombrePrograma.pml -> luego correrlo en devc++
+Para correr un programa: spin nombrePrograma.pml

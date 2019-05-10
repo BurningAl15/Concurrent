@@ -1,0 +1,25 @@
+#define wait(s) atomic {s > 0->s--}
+#define signal(s) signal s++
+
+#define NUM_PROD 4
+#define NUM_CONS 3
+
+active[NUM_PROD] proctype producer()
+{
+    byte event
+    int cont=0
+    do
+    :: event=_pid*1000+cont;
+    cont++;
+    od
+}
+
+active[NUM_CONS] proctype consumer()
+{
+    int event
+    do
+    ::n--
+    event=buffer[n];
+    printf("Consumidor %d isa %d \n,_pid,event)
+    od
+}
